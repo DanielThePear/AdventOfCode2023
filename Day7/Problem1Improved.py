@@ -3,6 +3,23 @@ import collections
 from functools import cmp_to_key
 
 
+card_values = {
+    "2": 0,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 7,
+    "T": 8,
+    "J": 9,
+    "Q": 10,
+    "K": 11,
+    "A": 12,
+}
+
+
 def main() -> None:
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -31,14 +48,13 @@ def custom_sorting_func(line_0, line_1) -> int:
     return compare_hands(line_0_hand, line_1_hand)
 
     
-def compare_hands(hand_1, hand_2):
-    custom_values = ("2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A")
+def compare_hands(hand_0, hand_1):
     for i in range(5):
-        hand_1_char_val = custom_values.index(hand_1[i])
-        hand_2_char_val = custom_values.index(hand_2[i])
+        hand_0_char_val = card_values[hand_0[i]]
+        hand_1_char_val = card_values[hand_1[i]]
 
-        if hand_1_char_val == hand_2_char_val: continue
-        return 1 if hand_1_char_val > hand_2_char_val else -1
+        if hand_0_char_val == hand_1_char_val: continue
+        return 1 if hand_0_char_val > hand_1_char_val else -1
 
 
 def identify_hand_type(hand):
