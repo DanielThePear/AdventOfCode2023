@@ -1,1 +1,0 @@
-if 3 in range(1, 4): print("Yes")
