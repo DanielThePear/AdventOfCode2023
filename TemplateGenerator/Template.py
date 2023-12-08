@@ -8,7 +8,7 @@ def main() -> None:
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    with open("TestInput1.txt", "r") as f:
+    with open("TestInput.txt", "r") as f:
         lines = f.read().splitlines()
 
 
