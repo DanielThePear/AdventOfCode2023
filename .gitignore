@@ -164,3 +164,4 @@ cython_debug/
 pypy3.10-v7.3.13-win64/
 TemplateGenerator/config.json
 Testing*.py
+Day8/Problem2Bad.py
