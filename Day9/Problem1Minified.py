@@ -1,6 +1,6 @@
 import os
 from functools import reduce
-from itertools import accumulate, takewhile
+from itertools import takewhile
 from sys import maxsize
 
 
